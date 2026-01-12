@@ -54,4 +54,44 @@ def edit_file(filename):
         print("An error occured!")
 
 
+def main():
+    while True:
+        print("FILE MANAGEMENT APP")
+        print("1. Create File")
+        print("2. View All Files")
+        print("3. Delete File")
+        print("4. Read File")
+        print("5. Edit File")
+        print("6. Exit")
 
+        choice = int(input("Enter you choice(1-6): ").strip())
+
+        if choice == 1:
+            filename = input("Enter filename to create.").strip()
+            create_file(filename)
+
+        elif choice == 2:
+            view_all_files()
+
+        elif choice == 3:
+            filename = input("Enter the filename you want to delete.").strip()
+            delete_file(filename)
+
+        elif choice == 4:
+            filename = input("Enter the filename to read.")
+            read_file(filename)
+        
+        elif choice == 5:
+            filename = input("Enter the filename to edit.")
+            edit_file(filename)
+        
+        elif choice == 6:
+            print("Exiting App......")
+            break
+
+        else:
+            print("Invalid choice!")
+
+
+if __name__ == "__main__":
+    main()
