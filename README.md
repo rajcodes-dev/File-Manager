@@ -1,2 +1,2 @@
 # File Manager
-A project which manage file.
+A Python utility to automatically organize and manage local files.
